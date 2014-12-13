@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tag.js test</title>
+	<script src="../src/tag.js"></script>
+</head>
+<body>
+	<script>
+		tag('h1').text('Test page').class('heading').close();
+		tag('ul#testlist.list')
+			.then(function() {
+				return tag('li').text('A list item').data({i: 0});
+			})
+		.close();
+		tag('a').text('Google').attr({href: 'http://www.google.com'}).close();
+	</script>
+</body>
+</html>
