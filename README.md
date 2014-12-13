@@ -33,7 +33,7 @@ Add text or html
 tag('p').text("1 is &gt; 2.").html(" &lt;strong&gt;really.&lt;/strong&gt;")
 </pre>
 
-Add more complex content
+##### Add more complex content
 
 Nest tag calls by calling close on inner tags
 
