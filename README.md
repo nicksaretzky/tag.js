@@ -30,7 +30,7 @@ h2. Content
 Add text or html
 
 <pre>
-tag('p').text("1 is > 2.").html(" <strong>really.</strong>")
+tag('p').text("1 is &gt; 2.").html(" &lt;strong&gt;really.&lt;/strong&gt;")
 </pre>
 
 Add more complex content
@@ -41,7 +41,7 @@ tag('p')
 		return tag('strong').text('hello')
 	})
 	.then(function() {
-		return "<p>foobar</p>"
+		return "&lt;p&gt;foobar&lt;/p&gt;"
 	})
 	.then(function() {
 		return document.getElementById('foo').cloneNode(true)
@@ -50,4 +50,6 @@ tag('p')
 
 h2. Write to the body tag
 
+<pre>
 tag('p').text("Hello world").close()
+</pre>
