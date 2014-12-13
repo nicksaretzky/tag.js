@@ -8,12 +8,19 @@
 <body>
 	<script>
 		tag('h1').text('Test page').class('heading').close();
+
 		tag('ul#testlist.list')
 			.then(function() {
-				return tag('li').text('A list item').data({i: 0});
+				return tag('li').text('A list item').data({i: 0})
+					.tag('span').text(' with an inner tag').close()
 			})
+			.tag('li').text('Another list ')
+				.tag('span').text('syntax').close()
+			.close()
 		.close();
+
 		tag('a').text('Google').attr({href: 'http://www.google.com'}).close();
+
 		tag('p').text("1 is > 2.").html(" <strong>Really?</strong>").text(" Really.").close();
 	</script>
 </body>

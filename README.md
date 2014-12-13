@@ -35,6 +35,17 @@ tag('p').text("1 is &gt; 2.").html(" &lt;strong&gt;really.&lt;/strong&gt;")
 
 Add more complex content
 
+Nest tag calls by calling close on inner tags
+
+<pre>
+tag('ul')
+	.tag('li').text('first').close()
+	.tag('li').text('second').close()
+.close()
+</pre>
+
+Or encapsulate components via anonymous functions:
+
 <pre>
 tag('p')
 	.then(function() {
@@ -53,3 +64,5 @@ tag('p')
 <pre>
 tag('p').text("Hello world").close()
 </pre>
+
+When close is called on a top level tag, it appends to document.body. When tag is called on a tag, close returns the parent tag, allowing nesting.
