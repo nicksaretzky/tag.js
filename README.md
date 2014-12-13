@@ -3,7 +3,7 @@ tag.js
 
 Ultralight DOM wrapper for templating.
 
-h1. Create a tag
+## Create a tag
 
 <pre>
 tag("h1#welcome.heading")
@@ -11,7 +11,7 @@ tag("h1#welcome.heading")
 
 Tag uses a css-selector inspired syntax to quickly set tag name, class list and id.
 
-h2. Properties
+#### Properties
 
 Add class names:
 
@@ -25,7 +25,7 @@ Set attributes:
 tag('a').attr({src: "#fragment"})
 </pre>
 
-h2. Content
+#### Content
 
 Add text or html
 
@@ -48,7 +48,7 @@ tag('p')
 	})
 </pre>
 
-h2. Write to the body tag
+#### Write to the body tag
 
 <pre>
 tag('p').text("Hello world").close()
