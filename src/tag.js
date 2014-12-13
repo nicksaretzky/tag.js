@@ -40,7 +40,6 @@
 			return this;
 		},
 		then: function(f) {
-			debugger;
 			if (!f) return;
 			var r = f();
 			if (r instanceof Tag) {
