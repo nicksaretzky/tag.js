@@ -21,11 +21,11 @@
 
 	Tag.prototype = {
 		html: function(html) {
-			this.el.innerHTML = html;
+			this.el.innerHTML += html;
 			return this;
 		},
 		text: function(text) {
-			if (text) this.el.innerText = text;
+			if (text) this.el.appendChild(document.createTextNode(text));
 			return this;
 		},
 		class: function(classNames) {
