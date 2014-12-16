@@ -50,6 +50,17 @@
 			}
 			return this;
 		},
+		/** Set attributes, combining and filtering them with a base object */
+		attrFilter: function(base, attrs, joiner) {
+			if (!base) return this;
+			joiner != null || (joiner = ' ');
+
+			for (a in base) {
+				var v = [this.el.getAttribute(a), base[a], attrs[a]].filter(Boolean);
+				if (v.length) this.el.setAttribute(a, v.join(joiner));
+			}
+			return this;
+		},
 		/** Append Tag, Element or string to content via anonymous function */
 		then: function(f) {
 			if (!f) return;

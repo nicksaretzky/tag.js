@@ -25,6 +25,14 @@ Set attributes:
 tag('a').attr({src: "#fragment"})
 </pre>
 
+Filter and merge two objects to set the attributes:
+
+<pre>
+tag('p').attrFilter({class: "hello", id: "greeting"}, {class: "world"})
+</pre>
+
+This can be useful for declaring a base value for attributes, and for only exposing certain attributes for variability in APIs.
+
 #### Content
 
 Add text or html

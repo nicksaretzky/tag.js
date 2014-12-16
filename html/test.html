@@ -22,6 +22,16 @@
 		tag('a').text('Google').attr({href: 'http://www.google.com'}).close();
 
 		tag('p').text("1 is > 2.").html(" <strong>Really?</strong>").text(" Really.").close();
+
+		tag('p')
+			.attrFilter({onclick: "this.v = 1"}, {onclick: "alert(this.v)"}, ";")
+			.text("attrFilter test")
+		.close();
+		
+		tag('p')
+			.attrFilter({class: null, id: null, target: "_blank"}, {onclick: "qq+r", class: "hello"})
+			.text("attrFilter test 2")
+		.close();
 	</script>
 </body>
 </html>
